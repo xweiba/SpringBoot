@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>demo</artifactId>
+        <groupId>com.example</groupId>
+        <version>0.0.1-SNAPSHOT</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>03-SpringBootRedis</artifactId>
+
+    <dependencies>
+        <!-- 导入 02-SpringBootWeb 依赖 -->
+        <dependency>
+            <groupId>com.example</groupId>
+            <artifactId>02-SpringBootWeb</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+        <!-- spring boot Redis 依赖 -->
+        <!-- Spring Boot使用的是1.4（包括1.4版本）之前的版本使用如下配置 -->
+        <!--<dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-redis</artifactId>
+        </dependency>-->
+        <!-- 1.5.* 的版本需要指定版本号 -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-redis</artifactId>
+            <version>1.4.6.RELEASE</version>
+        </dependency>
+        <!--&lt;!&ndash; 2.* 版本 redis依赖改名了,直接使用下面的依赖 &ndash;&gt;
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-redis</artifactId>
+        </dependency>-->
+    </dependencies>
+</project>
