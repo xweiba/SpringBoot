@@ -1,9 +1,9 @@
 package ml.xiaoweiba.service;
 
+import com.reger.dubbo.annotation.Inject;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
@@ -14,7 +14,7 @@ import static org.junit.Assert.*;
 @SpringBootTest
 public class ComputeServiceTest {
 
-    @Autowired
+    @Inject
     ComputeService computeService;
 
     @Test
