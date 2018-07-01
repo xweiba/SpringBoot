@@ -1,0 +1,26 @@
+server:
+  port: 8080
+spring:
+  datasource:   # 数据源配置
+    url: jdbc:mysql://localhost:3306/test?useSSL=true
+    username: test
+    password: test123456
+    driver-class-name: com.mysql.jdbc.Driver
+
+  jpa:
+    database: mysql
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+      naming:
+        strategy: org.hibernate.cfg.DefaultComponentSafeNamingStrategy
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL5Dialect
+  thymeleaf:  # thymeleaf的配置是为了去掉html的校验
+    cache: true
+    mode: LEGACYHTML5
+    suffix: .html
+
+
+
