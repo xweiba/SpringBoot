@@ -15,7 +15,7 @@ import static org.junit.Assert.*;
 public class ComputeServiceTest {
 
     @Inject
-    ComputeService computeService;
+    private ComputeService computeService;
 
     @Test
     public void add() {
