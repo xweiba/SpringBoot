@@ -1,0 +1,15 @@
+server:
+  port: 8899
+spring:
+  dubbo:
+    application:
+      name: provider
+    base-package: ml.xiaoweiba.service
+    registry:
+      address: 127.0.0.1
+      port: 2181
+    protocol:
+      name: dubbo
+      serialization: hessian2
+    provider:
+      retries: 0
