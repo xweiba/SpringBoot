@@ -15,7 +15,7 @@ import java.util.Date;
 @SpringBootTest
 public class StudentRepostioryTest {
     @Resource
-    StudentRepostiory studentRepostiory;
+    private StudentRepostiory studentRepostiory;
     @Test
     public void findByStudentName() {
         Date date = new Date();
@@ -27,13 +27,12 @@ public class StudentRepostioryTest {
         studentRepostiory.save(new Student("ad1",16,"123213@qw.com",formattedDate));
         studentRepostiory.save(new Student("eqw1",13,"3123@qw.com",formattedDate));
 
-        Assert.assertEquals(8, studentRepostiory.findAll().size());
-        Assert.assertEquals("ad1", studentRepostiory.findByStudentName("ad1").getStudentName());
-        studentRepostiory.delete(studentRepostiory.findByStudentName("aa1"));
+        Assert.assertEquals(20, studentRepostiory.findAll().size());
+        Assert.assertEquals("ad1", studentRepostiory.findByStudentName("ad1").get(0).getStudentName());
+        // studentRepostiory.delete(studentRepostiory.findByStudentName("aa1"));
     }
-
     @Test
     public void findByStudentNameOrAge() {
-        Assert.assertEquals("aa13213", studentRepostiory.findByStudentName("aa13213").getStudentName());
+        Assert.assertEquals("aa13213", studentRepostiory.findByStudentName("aa13213").get(0).getStudentName());
     }
 }

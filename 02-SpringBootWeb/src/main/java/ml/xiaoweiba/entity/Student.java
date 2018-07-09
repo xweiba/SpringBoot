@@ -35,29 +35,16 @@ public class Student implements Serializable{
     private String regTime;
 
     public Student(){
-
+        this.studentName = "test";
+        this.age = 23;
+        this.email = "liuhuan";
+        this.regTime = "2018年6月23日 下午03时24分57秒";
     }
 
     public Student(String studentName, int age, String email, String regTime) {
         this.studentName = studentName;
         this.age = age;
         this.email = email;
-        this.regTime = regTime;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
-    public String getRegTime() {
-        return regTime;
-    }
-
-    public void setRegTime(String regTime) {
         this.regTime = regTime;
     }
 
@@ -85,5 +72,19 @@ public class Student implements Serializable{
         this.age = age;
     }
 
+    public String getEmail() {
+        return email;
+    }
 
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getRegTime() {
+        return regTime;
+    }
+
+    public void setRegTime(String regTime) {
+        this.regTime = regTime;
+    }
 }

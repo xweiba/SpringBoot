@@ -15,9 +15,9 @@ import java.io.Serializable;
 public class User implements Serializable{
     private static final long serialVersionUID = 8667468581448787106L;
 
-    @Value("${com.neo.username}")
+    @Value("${ml.xiaoweiba.entity.User.username}")
     private String sUsername;
-    @Value("${com.neo.age}")
+    @Value("${ml.xiaoweiba.entity.User.age}")
     private int iAge;
 
     public String getsUsername() {

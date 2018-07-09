@@ -34,7 +34,7 @@ public class FilterTest {
         // 设置过滤器
         registrationBean.setFilter(new MyFilter());
         // 过滤 `/*` 请求, 过滤所有请求
-        registrationBean.addUrlPatterns("/*");
+        registrationBean.addUrlPatterns("/test");
 
         registrationBean.addInitParameter("paramName", "parnmValue");
         registrationBean.setName("MyFilter");
