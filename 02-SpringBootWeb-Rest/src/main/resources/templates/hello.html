@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+<head>
+    <title>Hello World!</title>
+</head>
+<body>
+    <!--
+    在html标签内可通过th标签加${}表达式访问model里的对象数据。但如果不想通过th标签而是简单地访问model对象数据，或是想在javascript代码块里访问model中的数据，则要使用内联的方法。
+    -->
+    <h1 th:inline="text">Hello [[${#httpServletRequest.remoteUser}]]!</h1>
+    <!-- 以上代码可以取代下面的一般写法： -->
+    <!--<p>Hello, <span th:text="${session.user.name}">Sebastian</span>!</p>-->
+
+    <!-- 根据配置，Spring Security提供了一个过滤器来拦截请求并验证用户身份。如果用户身份认证失败，页面就重定向到/login?error，并且页面中会展现相应的错误信息。若用户想要注销登录，可以通过访问/login?logout请求，在完成注销之后，页面展现相应的成功消息。
+    -->
+    <form th:action="@{/logout}" method="post">
+        <input type="submit" value="注销"/>
+    </form>
+</body>
+</html>
