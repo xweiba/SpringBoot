@@ -6,6 +6,7 @@ spring:
       name: consumer
     base-package: ml.xiaoweiba.service
     registry:
+      protocol: zookeeper
       address: 127.0.0.1
       port: 2181
 
@@ -14,6 +15,6 @@ spring:
       serialization: hessian2
 
     consumer:
-      timeout: 1000
-      check: true
-      retries: 2
+      timeout: 1000 # 可选 性能调优 远程服务调用超时时间(毫秒) 1.0.16以上版本
+      check: true # 可选 服务治理 启动时检查提供者是否存在，true报错，false忽略 1.0.16以上版本
+      retries: 2  # 可选 性能调优 远程服务调用重试次数，不包括第一次调用，不需要重试请设为0 1.0.16以上版本

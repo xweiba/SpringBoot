@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class DubboTest {
+    // 使用Dubbo注解来实现远程对象注入
     @Inject
     private ComputeService computeService;
     @RequestMapping(value = "/", method = RequestMethod.GET)
