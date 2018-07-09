@@ -65,5 +65,4 @@ public class MyShiroRealm extends AuthorizingRealm {
         log.info("authenticationInfo.getCredentialsSalt(): " + authenticationInfo.getCredentialsSalt() + "authenticationInfo.getCredentials(): " + authenticationInfo.getCredentials() + authenticationInfo.getPrincipals());
         return authenticationInfo;
     }
-
 }
