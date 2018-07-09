@@ -1,15 +1,18 @@
+# Spring-Boot 端口号 防止跟消费者冲突
 server:
   port: 8899
+
 spring:
   dubbo:
     application:
-      name: provider
-    base-package: ml.xiaoweiba.service
-    registry:
+      name: provider  # 服务名称
+    base-package: ml.xiaoweiba.service  # 扫描@Service注解接口
+    registry:  # 注册中心配置 这里使用 zookeeper
+      protocol: zookeeper
       address: 127.0.0.1
       port: 2181
-    protocol:
+    protocol:   # 使用协议 及 序列化方式
       name: dubbo
       serialization: hessian2
-    provider:
+    provider:   # 是否重连, 0 为不重连, 这里让消费者重连
       retries: 0

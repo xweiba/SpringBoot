@@ -10,6 +10,7 @@ import ml.xiaoweiba.service.ComputeService;
  * @create: 2018-06-30 00:43
  **/
 
+// 添加dubbo service注解 让dubbo扫描到
 @Service
 public class ComputeServiceImpl implements ComputeService{
     @Override
