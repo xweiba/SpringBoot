@@ -1,4 +1,4 @@
-package ml.xiaoweiba.cache;
+package ml.xiaoweiba.config;
 
 import com.fasterxml.jackson.annotation.JsonAutoDetect;
 import com.fasterxml.jackson.annotation.PropertyAccessor;
